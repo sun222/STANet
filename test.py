@@ -16,6 +16,8 @@ def transform():
 
 
 def val(opt):
+
+    
     image_1_path = opt.image1_path
     image_2_path = opt.image2_path
     A_img = Image.open(image_1_path).convert('RGB')
@@ -111,6 +113,6 @@ if __name__ == '__main__':
     opt.results_dir = '/kaggle/working'
     opt.epoch = 'pam'
     opt.name = ''
-    opt.image_1_path = '/kaggle/input/led-subset/test_subset/test_subset/A/test_100.png'
-    opt.image_2_path ='/kaggle/input/led-subset/test_subset/test_subset/B/test_100.png'
+    opt.image1_path = '/kaggle/input/led-subset/test_subset/test_subset/A/test_100.png'
+    opt.image2_path ='/kaggle/input/led-subset/test_subset/test_subset/B/test_100.png'
     val(opt)
