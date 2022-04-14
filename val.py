@@ -76,7 +76,8 @@ if __name__ == '__main__':
     opt = TestOptions().parse()   # get training options
     opt = make_val_opt(opt)
     opt.phase = 'val'
-    opt.dataroot = 'path-to-LEVIR-CD-test'
+    
+#     opt.dataroot = 'path-to-LEVIR-CD-test'
 
     opt.dataset_mode = 'changedetection'
 
@@ -88,9 +89,14 @@ if __name__ == '__main__':
     opt.model = 'CDFA'
 
     opt.name = 'pam'
-    opt.results_dir = './results/'
+#     opt.results_dir = './results/'
 
     opt.epoch = '78_F1_1_0.88780'
     opt.num_test = np.inf
+    
+    
+    opt.dataroot = '/kaggle/input/led-subset/train_subset/train_subset/'
+
+    opt.results_dir = '/kaggle/working'
 
     val(opt)
