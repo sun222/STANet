@@ -91,12 +91,11 @@ if __name__ == '__main__':
     opt.name = 'pam'
 #     opt.results_dir = './results/'
 
-    opt.epoch = '78_F1_1_0.88780'
+    opt.epoch = 'pam_net_F'
     opt.num_test = np.inf
     
-    
     opt.dataroot = '/kaggle/input/led-subset/train_subset/train_subset/'
-
+    opt.checkpoints_dir='/kaggle/input/baidumodeltest/'
     opt.results_dir = '/kaggle/working'
 
     val(opt)
