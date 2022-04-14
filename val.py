@@ -45,6 +45,13 @@ def val(opt):
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
     model = create_model(opt)      # create a model given opt.model and other options
     model.setup(opt)               # regular setup: load and print networks; create schedulers
+    
+    
+    opt.checkpoints_dir="/kaggle/working/"
+    
+    
+    
+    
     save_path = os.path.join(opt.checkpoints_dir, opt.name, '%s_%s' % (opt.phase, opt.epoch))
     mkdir(save_path)
     model.eval()
