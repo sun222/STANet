@@ -97,5 +97,7 @@ if __name__ == '__main__':
     opt.dataroot = '/kaggle/input/led-subset/train_subset/train_subset/'
     opt.checkpoints_dir='/kaggle/input/baidumodeltest/'
     opt.results_dir = '/kaggle/working'
+    opt.epoch = 'pam'
+    opt.name = ''
 
     val(opt)
