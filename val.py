@@ -67,14 +67,16 @@ def val(opt):
             break
         model.set_input(data)  # unpack data from data loader
         score = model.test(val=True)           # run inference return confusion_matrix
-        running_metrics.update(score)
-
-        visuals = model.get_current_visuals()  # get image results
-        img_path = model.get_image_paths()     # get image paths
+        running_metrics.update(score)         
         if i % 5 == 0:  # save images to an HTML file
-            print('processing (%04d)-th image... %s' % (i, img_path))
+            print('processing (%04d)-th image.' % (i))      
 
-        save_visuals(visuals,save_path,img_path[0])
+#         visuals = model.get_current_visuals()  # get image results
+#         img_path = model.get_image_paths()     # get image paths
+#         if i % 5 == 0:  # save images to an HTML file
+#             print('processing (%04d)-th image... %s' % (i, img_path))
+
+#         save_visuals(visuals,save_path,img_path[0])
     score = running_metrics.get_scores()
     print_current_acc(log_name, opt.epoch, score)
 
