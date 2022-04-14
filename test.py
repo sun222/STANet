@@ -102,4 +102,14 @@ if __name__ == '__main__':
     parser.add_argument('--num_test', type=int, default=np.inf, help='how many test images to run')
 
     opt = parser.parse_args()
+    
+    opt.epoch = 'pam_net_F'
+    opt.num_test = np.inf
+    
+    opt.dataroot = '/kaggle/input/led-subset/train_subset/train_subset/'
+    opt.checkpoints_dir='/kaggle/input/baidumodeltest/'
+    opt.results_dir = '/kaggle/working'
+    opt.epoch = 'pam'
+    opt.name = ''
+    
     val(opt)
